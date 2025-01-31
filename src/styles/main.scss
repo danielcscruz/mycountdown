@@ -1,0 +1,44 @@
+@use 'hero' ;
+@use 'components/infos_bar';
+@use 'components/buttons';
+@use 'event';
+@use 'variables';
+
+@font-face {
+    font-family: 'alarm clock';
+    src: url('../../assets/fonts/alarmclock.woff2') format('woff2'),
+        url('../../assets/fonts/alarmclock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: variables.$textColor;
+    list-style: none;
+
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 640px){
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px){
+        max-width: 90%;
+    }
+}
+
+.display{
+    font-family: 'alarm clock', sans-serif;
+    color: #232623;
+    font-size: 40px;
+}
